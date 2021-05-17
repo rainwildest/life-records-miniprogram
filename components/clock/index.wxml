@@ -1,0 +1,23 @@
+<!--components/clock.wxml-->
+<view class="treat-time-container">
+  <view class="treat-time">
+    <view wx:for="{{circle}}" class="circle{{(index+1)}}" wx:key="index"/>
+    <view class="inner-circle{{type === 'clock' ? ' clock': ''}}">
+      <view class="treat-title" wx:if="{{type === 'digital'}}">Treat Time</view>
+      <view class="time" wx:if="{{type === 'digital'}}">
+        {{hour < 10 ? '0'+hour: hour}}:{{minute < 10 ? '0'+minute: minute}}:<text>{{second < 10 ? '0'+second: second}}</text>
+      </view>
+      <view class="time" wx:else>
+        <view class="hour">
+          <view class="hr" id="hr" style="transform:rotateZ({{hourHand}})" />
+        </view>
+        <view class="minute">
+          <view class="min" id="min" style="transform:rotateZ({{minuteHand}})" />
+        </view>
+        <view class="second">
+          <view class="sec" id="sec" style="transform:rotateZ({{secondHand}})" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

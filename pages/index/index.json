@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rw-clock":"/components/clock/index",
+    "rw-navbar":"/components/navbar/index"
+  }
+}

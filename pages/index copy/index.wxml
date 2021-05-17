@@ -1,0 +1,54 @@
+<!--index.wxml-->
+
+<view class="container">
+  <rw-navbar />
+  <view class="page">
+    <view class="top">
+      <view class="title">
+        <view class="left">
+          <view class="text">DENS Device</view>
+          <view class="sub">
+            <view class="flag">
+              <view class="ellipse ellipse1"></view>
+              <view class="ellipse ellipse2"></view>
+              <view class="ellipse ellipse3"></view>
+            </view>
+            <view class="subtext">Connected</view>
+          </view>
+        </view>
+        <i class="iconfont icon-points"></i>
+      </view>
+      
+      <rw-clock type="{{clockType}}" />
+
+      <button bindtap="changeType" style="margin-top: 100rpx">切换</button>
+      
+      <!-- <view class="comfort">COMFORT</view> -->
+      <!-- <view class="slider-container">
+        <view class="strength">Strength</view>
+        <view class="slider-outer">
+          <view class="bg">
+            <view class="left"></view>
+          </view>
+          <view class="thumb">
+            <view class="thumb-inner"></view>
+          </view>
+        </view>
+        <view class="number">
+          <view class="number-text">1</view>
+          <view class="number-text">2</view>
+          <view class="number-text">3</view>
+          <view class="number-text">4</view>
+        </view>
+      </view> -->
+      <!-- <view class="button-container">
+        <view class="button pause">
+          <i class="iconfont iconpause"></i>
+        </view>
+        <view class="button">
+          <i class="iconfont iconstop"></i>
+        </view>
+      </view> -->
+    </view>
+  </view>
+</view>

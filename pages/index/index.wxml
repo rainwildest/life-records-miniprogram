@@ -1,0 +1,92 @@
+<!--index.wxml-->
+<rw-navbar />
+<view class="container">
+  <view class="page-content">
+    <!-- 内容显示区 -->
+    <view class="monitor">
+      <view class="monitor-icon"></view>
+      <view class="monitor-content">
+        <view class="monitor-type">餐费</view>
+        <view class="monitor-money">
+          {{cost ? cost : 0}}
+        </view>
+      </view>
+    </view>
+
+
+    <!-- 切换 -->
+    <!-- <view class="switch-type">
+      <view class="switch-title">
+        支出
+      </view>
+      <view class="switch-title">
+        收入
+      </view>
+
+      <view class="test"></view>
+    </view> -->
+    <!-- 功能显示区 -->
+    <view class="life-item-container">
+      <view wx:for="{{payment}}" class="life-type">
+        <view class="content">
+          <view class="icon">
+
+          </view>
+          <view class="name">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 键盘 -->
+    <view class="keyboard">
+      <view class="key-content">
+        <view class="key">9</view>
+      </view>
+      <view class="key-content">
+        <view class="key">8</view>
+      </view>
+      <view class="key-content">
+        <view class="key">7</view>
+      </view>
+      <view class="key-content row-span-2">
+        <view class="key save">
+          保存
+        </view>
+      </view>
+      <view class="key-content">
+        <view class="key">6</view>
+      </view>
+      <view class="key-content">
+        <view class="key">5</view>
+      </view>
+      <view class="key-content">
+        <view class="key">4</view>
+      </view>
+      <view class="key-content">
+        <view class="key">3</view>
+      </view>
+      <view class="key-content">
+        <view class="key">2</view>
+      </view>
+      <view class="key-content">
+        <view class="key">1</view>
+      </view>
+      <view class="key-content row-span-2">
+        <view class="key clear">清空</view>
+      </view>
+      <view class="key-content">
+        <view class="key">.</view>
+      </view>
+      <view class="key-content">
+        <view class="key">0</view>
+      </view>
+      <view class="key-content">
+        <view class="key">del</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="mask" catchtouchmove="touchmoveHandler"></view> -->

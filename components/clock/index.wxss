@@ -1,0 +1,200 @@
+/* components/clock.wxss */
+.treat-time-container {
+  margin-top: 160rpx;
+  margin-bottom: 160rpx;
+}
+
+.treat-time-container .treat-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.treat-time-container .inner-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 340rpx;
+  height: 340rpx;
+  border-radius: 100%;
+  background: #e3e6ec;
+  background-image: linear-gradient(180deg,
+      #fff 0%,
+      rgba(255, 255, 255, 0) 100%);
+  box-shadow:
+    -20rpx -20rpx 60rpx 0 #fff,
+    20rpx 20rpx 60rpx 0 rgba(48, 161, 179, 0.4),
+    inset 2rpx 2rpx 0 0 #fff;
+}
+
+.treat-time-container .treat-title {
+  font-size: 24rpx;
+  color: #000;
+  letter-spacing: 1.2rpx;
+  text-align: center;
+  line-height: 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.treat-time-container .time {
+  font-size: 58rpx;
+  color: #000;
+  letter-spacing: 2.4rpx;
+  text-align: center;
+  line-height: 72rpx;
+}
+
+.treat-time-container .circle1 {
+  transform: rotateZ(60deg);
+  width: 440rpx;
+  height: 440rpx;
+  background: conic-gradient(rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      #2eb7c9 -240deg,
+      #43d8cd 70%,
+      #43d8cd 100%);
+  border-radius: 100%;
+}
+
+.treat-time-container .circle2 {
+  width: 440rpx;
+  height: 440rpx;
+  position: absolute;
+  border-radius: 100%;
+  background: rgba(46, 183, 207, 0.7);
+  opacity: 0.1;
+}
+
+.treat-time-container .circle3 {
+  position: absolute;
+  border-radius: 100%;
+
+  animation: circle-animation 2.5s linear infinite;
+}
+
+.treat-time-container .circle4 {
+  position: absolute;
+  border-radius: 100%;
+
+  animation: circle-animation 2.5s 0.5s linear infinite;
+}
+
+.treat-time-container .circle5 {
+  position: absolute;
+  border-radius: 100%;
+
+  animation: circle-animation 2.5s 1s linear infinite;
+}
+
+.treat-time-container .circle6 {
+  position: absolute;
+  border-radius: 100%;
+
+  animation: circle-animation 2.5s 1.5s linear infinite;
+}
+
+.treat-time-container .circle7 {
+  position: absolute;
+  border-radius: 100%;
+
+  animation: circle-animation 2.5s 2s linear infinite;
+}
+
+@keyframes circle-animation {
+  0% {
+    width: 440rpx;
+    height: 440rpx;
+    border: 2rpx solid rgba(46, 183, 201, 0.6);
+  }
+
+  100% {
+    width: 600rpx;
+    height: 600rpx;
+    border: 2rpx solid rgba(46, 183, 201, 0.1);
+  }
+}
+
+
+
+.clock .time{
+  position: absolute;
+  width: 340rpx;
+  height: 340rpx;
+  border-radius: 100%;
+  background-size: cover;
+  background-image: var(--bg-clock-);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock .time::after{
+  content: "";
+  position: absolute;
+  width: 26rpx;
+  height: 26rpx;
+  background: #000;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.clock .time .hour,
+.clock .time .minute,
+.clock .time .second{
+  position: absolute;
+}
+
+.clock .time .hour, .hr{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.clock .time .minute, .min{
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.clock .time .second, .sec{
+  width: 280rpx;
+  height: 280rpx;
+}
+.hr, .min, .sec {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: absolute;
+  border-radius: 50%;
+}
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 14rpx;
+  height: 80rpx;
+  background: gray;
+  z-index: 10;
+  border-radius: 12rpx 12rpx 0 0;
+}
+
+.min::before {
+  content: "";
+  position: absolute;
+  width: 10rpx;
+  height: 110rpx;
+  background: gray;
+  z-index: 11;
+  border-radius: 12rpx 12rpx 0 0;
+}
+
+.sec::before {
+  content: "";
+  position: absolute;
+  width: 4rpx;
+  height: 130rpx;
+  background: gray;
+  z-index: 12;
+  border-radius: 12rpx 12rpx 0 0;
+}
